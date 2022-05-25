@@ -1,11 +1,15 @@
+//packages import
 const express = require('express');
-const { getMostPopularMovies, getInTheaters } = require('../controllers/movies');
-// const { Validate } = require('../middleware/validate')
 
+//controllers import
+const {getSearchedMovies, getMovieById } = require('../controllers/movies');
+
+//initializing express router
 const router = new express.Router()
 
-router.get('/most-popular-movies', getMostPopularMovies)
-router.get('/in-theaters', getInTheaters)
-router.get('/coming-soon', getInTheaters)
+//movie routes
+router.get('/searched-movies', getSearchedMovies)
+router.get('/movie', getMovieById)
 
+//router export
 module.exports = router;

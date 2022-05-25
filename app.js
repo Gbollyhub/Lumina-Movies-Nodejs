@@ -10,7 +10,7 @@ const app = express();
 const moviesRoute = require('./routes/movies.js')
 const userRoute = require('./routes/user.js')
 
-//middleware
+//middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
@@ -23,7 +23,7 @@ const port = process.env.PORT || 4000;
 
 //running the app on port
 app.listen(port, () => {
-    console.log('Server running on Port '+ port)
+    console.log('Server running on Port ' + port)
 })
 
 module.exports = app;
