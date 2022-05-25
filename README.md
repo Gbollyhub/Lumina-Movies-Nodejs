@@ -6,7 +6,9 @@ It runs on the V8 JavaScript runtime engine, and it uses event-driven, non-block
 
 # Application Insights
 
-The Nodejs Application is built on EXPRESS server, and uses MYSQL database. This Nodejs API returns various endpoints that drive the Frontend application [Lumina Movies Frontend With React (https://github.com/Gbollyhub/Lumina-Movies-React)]
+The Nodejs Application is built on EXPRESS server, and uses MYSQL database. 
+This Nodejs API returns various endpoints that drive the Frontend application [Lumina Movies Frontend With React (https://github.com/Gbollyhub/Lumina-Movies-React)]
+The Nodejs API makes use of a thirdparty API to return movies OMDB [https://www.omdbapi.com/]:
 
 ## How to run this application
 
