@@ -6,7 +6,7 @@ require('dotenv').config()
 // method to searched movie from IMDB_API using axios
 exports.getSearchedMovies = async (req, res) => {
     try {
-    const result = await axios.get(`${process.env.IMDB_API_URL}/?s=${req.query.search}&page=1&apikey=${process.env.IMDB_API_KEY}`);
+    const result = await axios.get(`${process.env.OMDB_API_KEY}/?s=${req.query.search}&page=1&apikey=${process.env.OMDB_API_URL}`);
      res.status(200).send(result.data);
 
     } catch (error) {
@@ -20,7 +20,7 @@ exports.getSearchedMovies = async (req, res) => {
 
 exports.getMovieById = async (req, res) => {
     try {
-    const result = await axios.get(`${process.env.IMDB_API_URL}//?i=${req.query.id}&apikey=${process.env.IMDB_API_KEY}`);
+    const result = await axios.get(`${process.env.OMDB_API_KEY}//?i=${req.query.id}&apikey=${process.env.OMDB_API_URL}`);
     
      res.status(200).send(result.data);
     } catch (error) {
